@@ -27,7 +27,6 @@ namespace C968_Broussard_Joshua
         {
             MessageBox.Show(ErrorMessage, "Error");
         }
-        public abstract bool Validate(string s);
     }
 
 }

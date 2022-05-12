@@ -63,6 +63,8 @@
             this.priceAssociatedParts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minAssociatedParts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maxAssociatedParts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allPartsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.associatedPartsGrid)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +100,7 @@
             this.allPartsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.allPartsGrid.Size = new System.Drawing.Size(378, 193);
             this.allPartsGrid.TabIndex = 1;
+            this.allPartsGrid.TabStop = false;
             // 
             // partIDAllParts
             // 
@@ -151,7 +154,7 @@
             this.deleteButton.Location = new System.Drawing.Point(429, 306);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 3;
+            this.deleteButton.TabIndex = 999;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
@@ -184,10 +187,11 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(136, 23);
             this.idTextBox.TabIndex = 0;
+            this.idTextBox.TabStop = false;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(429, 12);
+            this.nameTextBox.Location = new System.Drawing.Point(192, 43);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(136, 23);
             this.nameTextBox.TabIndex = 1;
@@ -196,7 +200,7 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameLabel.Location = new System.Drawing.Point(371, 12);
+            this.nameLabel.Location = new System.Drawing.Point(134, 43);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(52, 21);
             this.nameLabel.TabIndex = 7;
@@ -205,7 +209,7 @@
             // 
             // inventoryTextBox
             // 
-            this.inventoryTextBox.Location = new System.Drawing.Point(192, 41);
+            this.inventoryTextBox.Location = new System.Drawing.Point(429, 14);
             this.inventoryTextBox.Name = "inventoryTextBox";
             this.inventoryTextBox.Size = new System.Drawing.Size(136, 23);
             this.inventoryTextBox.TabIndex = 2;
@@ -214,7 +218,7 @@
             // 
             this.inventoryLabel.AutoSize = true;
             this.inventoryLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inventoryLabel.Location = new System.Drawing.Point(110, 41);
+            this.inventoryLabel.Location = new System.Drawing.Point(347, 14);
             this.inventoryLabel.Name = "inventoryLabel";
             this.inventoryLabel.Size = new System.Drawing.Size(76, 21);
             this.inventoryLabel.TabIndex = 9;
@@ -355,6 +359,7 @@
             this.associatedPartsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.associatedPartsGrid.Size = new System.Drawing.Size(378, 193);
             this.associatedPartsGrid.TabIndex = 21;
+            this.associatedPartsGrid.TabStop = false;
             // 
             // partIDAssociatedParts
             // 
@@ -403,11 +408,30 @@
             this.maxAssociatedParts.ReadOnly = true;
             this.maxAssociatedParts.Width = 50;
             // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(142, 306);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(100, 23);
+            this.searchBox.TabIndex = 6;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(248, 306);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.TabIndex = 24;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 360);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.associatedPartsGrid);
             this.Controls.Add(this.associatedPartsLabel);
             this.Controls.Add(this.allPartsLabel);
@@ -430,7 +454,7 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.allPartsGrid);
             this.Name = "AddProduct";
-            this.Text = "AddProduct";
+            this.Text = "Add Product";
             ((System.ComponentModel.ISupportInitialize)(this.allPartsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.associatedPartsGrid)).EndInit();
             this.ResumeLayout(false);
@@ -473,5 +497,7 @@
         private DataGridViewTextBoxColumn priceAssociatedParts;
         private DataGridViewTextBoxColumn minAssociatedParts;
         private DataGridViewTextBoxColumn maxAssociatedParts;
+        private TextBox searchBox;
+        private Button searchButton;
     }
 }

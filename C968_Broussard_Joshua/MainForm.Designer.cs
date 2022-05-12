@@ -57,7 +57,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.partSearchTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.productsSearchBox = new System.Windows.Forms.TextBox();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PartID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.partGrid)).BeginInit();
@@ -253,6 +253,7 @@
             this.productsSearchButton.TabIndex = 6;
             this.productsSearchButton.Text = "Search";
             this.productsSearchButton.UseVisualStyleBackColor = true;
+            this.productsSearchButton.Click += new System.EventHandler(this.productsSearchButton_Click);
             // 
             // partsDeleteButton
             // 
@@ -302,6 +303,7 @@
             this.productsModifyButton.TabIndex = 11;
             this.productsModifyButton.Text = "Modify";
             this.productsModifyButton.UseVisualStyleBackColor = true;
+            this.productsModifyButton.Click += new System.EventHandler(this.productsModifyButton_Click);
             // 
             // productsDeleteButton
             // 
@@ -311,10 +313,11 @@
             this.productsDeleteButton.TabIndex = 10;
             this.productsDeleteButton.Text = "Delete";
             this.productsDeleteButton.UseVisualStyleBackColor = true;
+            this.productsDeleteButton.Click += new System.EventHandler(this.productsDeleteButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(829, 415);
+            this.exitButton.Location = new System.Drawing.Point(835, 377);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 13;
@@ -329,12 +332,12 @@
             this.partSearchTextBox.Size = new System.Drawing.Size(156, 23);
             this.partSearchTextBox.TabIndex = 14;
             // 
-            // textBox2
+            // productsSearchBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(667, 301);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 23);
-            this.textBox2.TabIndex = 15;
+            this.productsSearchBox.Location = new System.Drawing.Point(667, 301);
+            this.productsSearchBox.Name = "productsSearchBox";
+            this.productsSearchBox.Size = new System.Drawing.Size(156, 23);
+            this.productsSearchBox.TabIndex = 15;
             // 
             // form1BindingSource
             // 
@@ -351,8 +354,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 449);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(922, 412);
+            this.Controls.Add(this.productsSearchBox);
             this.Controls.Add(this.partSearchTextBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.productsAddButton);
@@ -396,7 +399,7 @@
         private Button exitButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TextBox partSearchTextBox;
-        private TextBox textBox2;
+        private TextBox productsSearchBox;
         private BindingSource form1BindingSource;
         private DataGridViewTextBoxColumn PartID;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

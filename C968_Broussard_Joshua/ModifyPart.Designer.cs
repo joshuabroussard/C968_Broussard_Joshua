@@ -66,8 +66,7 @@
             this.inhouseButton.Location = new System.Drawing.Point(22, 39);
             this.inhouseButton.Name = "inhouseButton";
             this.inhouseButton.Size = new System.Drawing.Size(91, 25);
-            this.inhouseButton.TabIndex = 1;
-            this.inhouseButton.TabStop = true;
+            this.inhouseButton.TabIndex = 999;
             this.inhouseButton.Text = "In-House";
             this.inhouseButton.UseVisualStyleBackColor = true;
             this.inhouseButton.CheckedChanged += new System.EventHandler(this.inhouseButton_CheckedChanged);
@@ -79,8 +78,7 @@
             this.outsourcedButton.Location = new System.Drawing.Point(119, 39);
             this.outsourcedButton.Name = "outsourcedButton";
             this.outsourcedButton.Size = new System.Drawing.Size(109, 25);
-            this.outsourcedButton.TabIndex = 2;
-            this.outsourcedButton.TabStop = true;
+            this.outsourcedButton.TabIndex = 999;
             this.outsourcedButton.Text = "Outsourced";
             this.outsourcedButton.UseVisualStyleBackColor = true;
             this.outsourcedButton.CheckedChanged += new System.EventHandler(this.outsourcedButton_CheckedChanged);
@@ -102,6 +100,7 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 23);
             this.idTextBox.TabIndex = 4;
+            this.idTextBox.TabStop = false;
             // 
             // changingTextBox
             // 
@@ -126,7 +125,7 @@
             this.minTextBox.Location = new System.Drawing.Point(135, 215);
             this.minTextBox.Name = "minTextBox";
             this.minTextBox.Size = new System.Drawing.Size(100, 23);
-            this.minTextBox.TabIndex = 8;
+            this.minTextBox.TabIndex = 5;
             // 
             // minLabel
             // 
@@ -143,7 +142,7 @@
             this.maxTextBox.Location = new System.Drawing.Point(135, 186);
             this.maxTextBox.Name = "maxTextBox";
             this.maxTextBox.Size = new System.Drawing.Size(100, 23);
-            this.maxTextBox.TabIndex = 10;
+            this.maxTextBox.TabIndex = 4;
             // 
             // maxLabel
             // 
@@ -160,7 +159,7 @@
             this.priceTextBox.Location = new System.Drawing.Point(135, 157);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(100, 23);
-            this.priceTextBox.TabIndex = 12;
+            this.priceTextBox.TabIndex = 3;
             // 
             // priceLabel
             // 
@@ -177,7 +176,7 @@
             this.inventoryTextBox.Location = new System.Drawing.Point(135, 128);
             this.inventoryTextBox.Name = "inventoryTextBox";
             this.inventoryTextBox.Size = new System.Drawing.Size(100, 23);
-            this.inventoryTextBox.TabIndex = 14;
+            this.inventoryTextBox.TabIndex = 2;
             // 
             // inventoryLabel
             // 
@@ -194,7 +193,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(135, 99);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 23);
-            this.nameTextBox.TabIndex = 16;
+            this.nameTextBox.TabIndex = 1;
             // 
             // nameLabel
             // 

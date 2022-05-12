@@ -14,13 +14,6 @@ namespace C968_Broussard_Joshua
             else ErrorMessage = VerifyOutsourced(name, price, inventory, min, max, changing);
             return ErrorMessage.Length == 0;
         }
-
-
-
-        public override bool Validate(string s)
-        {
-            throw new NotImplementedException();
-        }
         private string VerifyOutsourced(string name, string price, string inventory, string min, string max, string companyName)
         {
             string errorText = "";
@@ -58,16 +51,16 @@ namespace C968_Broussard_Joshua
             if (machineID.Length == 0) errorText += "Error: Part Must Have A Machine ID.\n";
 
             if (!IsDecimal(price)) errorText += "Error: Price Must Be a Number.\n";
-            if (!IsInt(inventory)) errorText += "Error: Inventory Must Be a Number.\n";
-            if (!IsInt(min)) errorText += "Error: Min Must Be a Number.\n";
-            if (!IsInt(max)) errorText += "Error: Max Must Be a Number.\n";
-            if (!IsInt(machineID)) errorText += "Error: Machine ID Must Be a Number.\n";
+            if (!IsInt(inventory)) errorText += "Error: Inventory Must Be a Whole Number.\n";
+            if (!IsInt(min)) errorText += "Error: Min Must Be a Whole Number.\n";
+            if (!IsInt(max)) errorText += "Error: Max Must Be a Whole Number.\n";
+            if (!IsInt(machineID)) errorText += "Error: Machine ID Must Be a Whole Number.\n";
 
             if (errorText == "" && int.Parse(max) < int.Parse(min)) errorText += "Error: Max Must Be Greater Than Min\n";
 
             if (errorText == "" && (int.Parse(inventory) < int.Parse(min) || int.Parse(inventory) > int.Parse(max)))
             {
-                errorText += "Error: Inventory must be between Min and Max\n";
+                errorText += "Error: Inventory must be between Min and Max Values\n";
             }
 
             return errorText;

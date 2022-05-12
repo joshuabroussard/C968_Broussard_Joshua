@@ -17,11 +17,11 @@ namespace C968_Broussard_Joshua
             Products = products;
             AllParts = allParts;
         }
-        void addProduct(Product product)
+        public void addProduct(Product product)
         {
             Products.Add(product);
         }
-        bool removeProduct(int productID) 
+        public bool removeProduct(int productID) 
         {
             var product = lookupProduct(productID);
             return Products.Remove(product);
@@ -37,15 +37,19 @@ namespace C968_Broussard_Joshua
             }
             return new Product();
         }
-        void updateProduct(int productID, Product updatedProduct) 
+        public void updateProduct(int productID, Product updatedProduct) 
         {
-            Product product = lookupProduct(productID);
-            product.AssociatedParts = updatedProduct.AssociatedParts;
-            product.Name = updatedProduct.Name;
-            product.InStock = updatedProduct.InStock;
-            product.Price = updatedProduct.Price;
-            product.Max = updatedProduct.Max;
-            product.Min = updatedProduct.Min;
+            //Product product = lookupProduct(productID);
+            //product.AssociatedParts = updatedProduct.AssociatedParts;
+            //product.Name = updatedProduct.Name;
+            //product.InStock = updatedProduct.InStock;
+            //product.Price = updatedProduct.Price;
+            //product.Max = updatedProduct.Max;
+            //product.Min = updatedProduct.Min;
+            var product = lookupProduct(productID);
+            int i = Products.IndexOf(product);
+            if (i == -1) return;
+            Products[i] = updatedProduct;
 
 
         }
@@ -53,7 +57,7 @@ namespace C968_Broussard_Joshua
         {
             AllParts.Add(part);
         }
-        bool deletePart(Part part) 
+        public bool deletePart(Part part) 
         {
             return AllParts.Remove(part);
         }
@@ -69,10 +73,9 @@ namespace C968_Broussard_Joshua
         {
             var part = lookupPart(partID);
             int i = AllParts.IndexOf(part);
-            if (i != -1)
-            {
-                AllParts[i] = updatedPart;
-            }
+            if (i == -1) return;
+            AllParts[i] = updatedPart;
+            
 
         }
 
